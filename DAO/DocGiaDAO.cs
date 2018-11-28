@@ -38,7 +38,7 @@ namespace DAO
 
         public DataTable TimKiemDG(String str)
         {
-            String query = "select * from DocGia where MaDocGia like '%" + str + "%' or TenDocGia like '%" + str + "%' or GioiTinh like '%" + str + "%' or DiaChi like '%" + str + "%' or SDT like '%" + str + "%'";
+            String query = "select * from DocGia where MaDocGia like '%" + str + "%' or TenDocGia like N'%" + str + "%' or GioiTinh like N'%" + str + "%' or DiaChi like N'%" + str + "%' or SDT like '%" + str + "%'";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -59,11 +59,13 @@ namespace DAO
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 
-        public void XoaDG(DocGia docgia)
+        public void XoaDG(String str)
         {
-            String query = "delete DocGia where MaDocGia=N'" + docgia.MaDg + "'";
-
+            String query = "delete PhieuMuon where MaDocGia=N'" + str + "'";
             DataProvider.Instance.ExecuteNonQuery(query);
+
+            String query1 = "delete DocGia where MaDocGia=N'" + str + "'";
+            DataProvider.Instance.ExecuteNonQuery(query1);
         }
     }
 }

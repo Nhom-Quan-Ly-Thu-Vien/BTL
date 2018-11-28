@@ -9,3 +9,12 @@ D:\BTL_C#\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 D:\BTL_C#\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\BTL_C#\BUS\obj\Debug\BUS.dll
 D:\BTL_C#\BUS\obj\Debug\BUS.pdb
+D:\BTL\BUS\bin\Debug\BUS.dll
+D:\BTL\BUS\bin\Debug\BUS.pdb
+D:\BTL\BUS\bin\Debug\DAO.dll
+D:\BTL\BUS\bin\Debug\DTO.dll
+D:\BTL\BUS\bin\Debug\DAO.pdb
+D:\BTL\BUS\bin\Debug\DTO.pdb
+D:\BTL\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\BTL\BUS\obj\Debug\BUS.dll
+D:\BTL\BUS\obj\Debug\BUS.pdb

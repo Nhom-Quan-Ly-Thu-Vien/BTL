@@ -9,16 +9,42 @@ namespace DTO
     public class Sach
     {
         private string maSach;
+
+        public string MaSach
+        {
+            get { return maSach; }
+            set { maSach = value; }
+        }
         private string tenSach;
+
+        public string TenSach
+        {
+            get { return tenSach; }
+            set { tenSach = value; }
+        }
         private string tenTheLoai;
+
+        public string TenTheLoai
+        {
+            get { return tenTheLoai; }
+            set { tenTheLoai = value; }
+        }
         private int soLuong;
+
+        public int SoLuong
+        {
+            get { return soLuong; }
+            set { soLuong = value; }
+        }
         private string tenTacGia;
 
-        public string MaSach { get => maSach; set => maSach = value; }
-        public string TenSach { get => tenSach; set => tenSach = value; }
-        public string TenTheLoai { get => tenTheLoai; set => tenTheLoai = value; }
-        public int SoLuong { get => soLuong; set => soLuong = value; }
-        public string TenTacGia { get => tenTacGia; set => tenTacGia = value; }
+        public string TenTacGia
+        {
+            get { return tenTacGia; }
+            set { tenTacGia = value; }
+        }
+
+        
 
         public Sach (string ma, string ten, string theloai, int sl,string tg)
         {

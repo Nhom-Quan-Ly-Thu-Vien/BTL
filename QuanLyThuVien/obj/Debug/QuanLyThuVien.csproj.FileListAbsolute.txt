@@ -53,3 +53,16 @@ D:\BTL_C#\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
 D:\BTL\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
 D:\BTL\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 D:\BTL\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+D:\BTL\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+D:\BTL\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+D:\BTL\QuanLyThuVien\bin\Debug\BUS.dll
+D:\BTL\QuanLyThuVien\bin\Debug\DTO.dll
+D:\BTL\QuanLyThuVien\bin\Debug\DAO.dll
+D:\BTL\QuanLyThuVien\bin\Debug\BUS.pdb
+D:\BTL\QuanLyThuVien\bin\Debug\DTO.pdb
+D:\BTL\QuanLyThuVien\bin\Debug\DAO.pdb
+D:\BTL\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
+D:\BTL\QuanLyThuVien\obj\Debug\QuanLyThuVien.Login.resources
+D:\BTL\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+D:\BTL\QuanLyThuVien\obj\Debug\QuanLyThuVien.QuanLySach.resources
+D:\BTL\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.Cache

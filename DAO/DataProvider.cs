@@ -26,7 +26,9 @@ namespace DAO
 
         //chuoi ket noi
 
-        string connection = @"Data Source=ADMINISTRATOR\PHD;Initial Catalog=QuanLyThuVien1.0;Integrated Security=True";
+        //string connection = @"Data Source=ADMINISTRATOR\PHD;Initial Catalog=QuanLyThuVien1.0;Integrated Security=True";
+
+        string connection = @"Data Source=ADMIN\QUOCCUONG;Initial Catalog=QuanLyThuVien1.0;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query)
         {

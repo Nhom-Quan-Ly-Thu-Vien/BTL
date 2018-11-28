@@ -9,12 +9,28 @@ namespace DTO
     public class PhieuTra
     {
         private string maPhieu;
+
+        public string MaPhieu
+        {
+            get { return maPhieu; }
+            set { maPhieu = value; }
+        }
         private DateTime ngayTra;
+
+        public DateTime NgayTra
+        {
+            get { return ngayTra; }
+            set { ngayTra = value; }
+        }
         private string tenSach;
 
-        public string MaPhieu { get => maPhieu; set => maPhieu = value; }
-        public DateTime NgayTra { get => ngayTra; set => ngayTra = value; }
-        public string TenSach { get => tenSach; set => tenSach = value; }
+        public string TenSach
+        {
+            get { return tenSach; }
+            set { tenSach = value; }
+        }
+
+        
 
         public PhieuTra(string mp, DateTime nt,string ten)
         {

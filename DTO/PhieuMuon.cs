@@ -9,16 +9,37 @@ namespace DTO
     public class PhieuMuon
     {
         private string maDG;
+
+        public string MaDG
+        {
+            get { return maDG; }
+            set { maDG = value; }
+        }
         private string maSach;
+
+        public string MaSach
+        {
+            get { return maSach; }
+            set { maSach = value; }
+        }
         private int soLuong;
+
+        public int SoLuong
+        {
+            get { return soLuong; }
+            set { soLuong = value; }
+        }
         private DateTime ngayMuon;
+
+        public DateTime NgayMuon
+        {
+            get { return ngayMuon; }
+            set { ngayMuon = value; }
+        }
         
 
        
-        public string MaDG { get => maDG; set => maDG = value; }
-        public string MaSach { get => maSach; set => maSach = value; }
-        public int SoLuong { get => soLuong; set => soLuong = value; }
-        public DateTime NgayMuon { get => ngayMuon; set => ngayMuon = value; }
+       
        
 
         public PhieuMuon(string mdg, string ms,int sl ,DateTime nm)

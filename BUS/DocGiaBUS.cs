@@ -49,9 +49,9 @@ namespace BUS
                 DocGiaDAO.Instance.SuaDG(docgia);
             }
 
-            public void XoaDG(DocGia docgia)
+            public void XoaDG(String str)
             {
-                DocGiaDAO.Instance.XoaDG(docgia);
+                DocGiaDAO.Instance.XoaDG(str);
             }
         }
 

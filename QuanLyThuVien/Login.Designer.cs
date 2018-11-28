@@ -67,7 +67,7 @@
             this.txtlogin.Name = "txtlogin";
             this.txtlogin.Size = new System.Drawing.Size(154, 20);
             this.txtlogin.TabIndex = 2;
-            this.txtlogin.Text = "PHD";
+            this.txtlogin.Text = "Admin";
             // 
             // txtpassword
             // 
@@ -75,7 +75,7 @@
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(154, 20);
             this.txtpassword.TabIndex = 3;
-            this.txtpassword.Text = "123456";
+            this.txtpassword.Text = "1";
             this.txtpassword.UseSystemPasswordChar = true;
             // 
             // btnlogin

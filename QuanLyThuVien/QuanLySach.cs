@@ -42,14 +42,12 @@ namespace QuanLyThuVien
 
 
             //code phần độc giả
-            if (txtMaDG.Text == "" && txtTenDG.Text == "" && rdoNam.Checked == false && rdoNu.Checked == false && txtDiaChi.Text == "" && txtSDT.Text == "")
-                btnClear.Visible = false;
             //Tăng mã tự động
             txtMaSach.Text = "MS" + (dtgQuanLySach.RowCount+1 < 11 ? "0" : "") + ((dtgQuanLySach.RowCount) );
             txtMaDG.Text = "DG" + (dtgDocGia.RowCount + 1 < 11 ? "0" : "") + ((dtgDocGia.RowCount));
             //txtMaPhieu.Text = "MP" + (dgvPhieuMuon.RowCount + 1 < 11 ? "0" : "") + ((dgvPhieuMuon.RowCount));
-            
 
+            txtMaDG.Enabled = false;
         }
         //show panel,form
         private void btnDocGia_Click(object sender, EventArgs e)
@@ -59,13 +57,13 @@ namespace QuanLyThuVien
             tabQuanLyPhieu.Hide();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void btnExit1_Click(object sender, EventArgs e)
         {
             DialogResult drl = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (drl == DialogResult.Yes) this.Close();
+            if (drl == DialogResult.Yes) Application.Exit();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnExit2_Click(object sender, EventArgs e)
         {
             DialogResult drl = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (drl == DialogResult.Yes) Application.Exit();
@@ -84,7 +82,9 @@ namespace QuanLyThuVien
             panQuanLySach.Hide();
             panDocGia.Hide();
             tabQuanLyPhieu.Show();
-            cmbTenSachPhieu.SelectedIndex = -1;         
+
+            tabQuanLyPhieu.SelectedTab = tabQuanLyPhieu.TabPages[0];
+            cmbTenSachPhieu.SelectedIndex = -1;       
             lstSachMuon.Items.Clear();
             txtMaDGPhieu.Text = "";
             lblSLM.Hide();
@@ -92,17 +92,15 @@ namespace QuanLyThuVien
             cboDGPT.SelectedIndex = -1;
         }
 
- 
-
-      
 
         //Code phần độc giả
 
         private void btnThemDG_Click(object sender, EventArgs e)
         {
-
             try
             {
+                txtMaDG.Text = "DG" + (dtgDocGia.RowCount + 1 < 10 ? "0" : "") + (dtgDocGia.RowCount);
+
                 if (txtMaDG.Text == "")
                     MessageBox.Show("Nhập mã độc giả.");
                 else if (txtTenDG.Text == "")
@@ -117,10 +115,11 @@ namespace QuanLyThuVien
                     if (rdoNam.Checked) gioitinh = "Nam";
                     else gioitinh = "Nữ";
 
-                    Int32 value;
-
-                    if (Int32.TryParse(txtSDT.Text, out value) == false)
+                    Double value;
+                    if (Double.TryParse(txtSDT.Text, out value) == false)
                         MessageBox.Show("Số điện thoại phải là số.");
+                    else if (txtSDT.TextLength < 10 || txtSDT.TextLength > 11)
+                        MessageBox.Show("Số điện thoại gồm 10 hoặc 11 số.");
                     else
                     {
                         DocGia docgia = new DocGia(txtMaDG.Text, txtTenDG.Text, gioitinh, txtDiaChi.Text, txtSDT.Text);
@@ -149,10 +148,11 @@ namespace QuanLyThuVien
                     if (rdoNam.Checked) gioitinh = "Nam";
                     else gioitinh = "Nữ";
 
-                    Int32 value;
-
-                    if (Int32.TryParse(txtSDT.Text, out value) == false)
+                    Double value;
+                    if (Double.TryParse(txtSDT.Text, out value) == false)
                         MessageBox.Show("Số điện thoại phải là số.");
+                    else if (txtSDT.TextLength < 10 || txtSDT.TextLength > 11)
+                        MessageBox.Show("Số điện thoại gồm 10 hoặc 11 số.");
                     else
                     {
                         DocGia docgia = new DocGia(txtMaDG.Text, txtTenDG.Text, gioitinh, txtDiaChi.Text, txtSDT.Text);
@@ -177,15 +177,10 @@ namespace QuanLyThuVien
                     MessageBox.Show("Chọn độc giả.");
                 else
                 {
-                    String gioitinh;
-                    if (rdoNam.Checked) gioitinh = "Nam";
-                    else gioitinh = "Nữ";
-
-                    DocGia docgia = new DocGia(txtMaDG.Text, txtTenDG.Text, gioitinh, txtDiaChi.Text, txtSDT.Text);
-                    DocGiaBUS.Instance.XoaDG(docgia);
+                    DocGiaBUS.Instance.XoaDG(txtMaDG.Text);
                     QuanLySach_Load(sender, e);
                     txtMaDG.Text = "DG" + (dtgDocGia.RowCount + 1 < 10 ? "0" : "") + ((dtgDocGia.RowCount));
-                    //MessageBox.Show("Xóa thành công.");
+                    MessageBox.Show("Xóa thành công.");
                 }
 
             }
@@ -195,17 +190,6 @@ namespace QuanLyThuVien
             }
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            btnClear.Visible = false;
-            txtMaDG.Enabled = true;
-            txtMaDG.Text = "";
-            txtTenDG.Text = "";
-            rdoNam.Checked = false;
-            rdoNu.Checked = false;
-            txtDiaChi.Text = "";
-            txtSDT.Text = "";
-        }
         private void btnLapPhieuMuon_Click(object sender, EventArgs e)
         {
             panQuanLySach.Hide();
@@ -242,14 +226,25 @@ namespace QuanLyThuVien
                 txtDiaChi.Text = dtgDocGia.Rows[row].Cells[3].Value.ToString();
 
                 txtSDT.Text = dtgDocGia.Rows[row].Cells[4].Value.ToString();
-
-                btnClear.Visible = true;
             }
             catch
             {
                 return;
             }
         }
+
+        private void panDocGia_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtMaDG.Text = "DG" + (dtgDocGia.RowCount + 1 < 10 ? "0" : "") + ((dtgDocGia.RowCount+1));
+
+            txtMaDG.Enabled = false;
+            txtTenDG.Text = "";
+            rdoNam.Checked = false;
+            rdoNu.Checked = false;
+            txtDiaChi.Text = "";
+            txtSDT.Text = "";
+        }
+        // Kết thúc Độc Giả
 
         //Code Quản lý sách
 
@@ -499,6 +494,7 @@ namespace QuanLyThuVien
             //{
             //    return;
             //}
+            
         }
        
         private void cboDGPT_SelectedIndexChanged(object sender, EventArgs e)
@@ -560,5 +556,6 @@ namespace QuanLyThuVien
 
 
         }
+
     }
 }

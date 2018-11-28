@@ -42,22 +42,6 @@
             this.lblHeader = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabQuanLyPhieu = new System.Windows.Forms.TabControl();
-            this.tabQLPhieu = new System.Windows.Forms.TabPage();
-            this.btnShowPT = new System.Windows.Forms.Button();
-            this.btnShowPM = new System.Windows.Forms.Button();
-            this.btnPhieuTra = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.btnXoaPM = new System.Windows.Forms.Button();
-            this.txtTKPhieu = new System.Windows.Forms.TextBox();
-            this.dgvPhieuMuon = new System.Windows.Forms.DataGridView();
-            this.dgvPhieuTra = new System.Windows.Forms.DataGridView();
-            this.tabLPTra = new System.Windows.Forms.TabPage();
-            this.btnXoaSachTra = new System.Windows.Forms.Button();
-            this.dpkNgayTra = new System.Windows.Forms.DateTimePicker();
-            this.label25 = new System.Windows.Forms.Label();
-            this.btnLapPhieuTra = new System.Windows.Forms.Button();
-            this.cboDGPT = new System.Windows.Forms.ComboBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.tabLPhieuMuon = new System.Windows.Forms.TabPage();
             this.txtSLMuon = new System.Windows.Forms.TextBox();
             this.lblSLM = new System.Windows.Forms.Label();
@@ -77,6 +61,26 @@
             this.label21 = new System.Windows.Forms.Label();
             this.txtMaDGPhieu = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.tabLPTra = new System.Windows.Forms.TabPage();
+            this.lbltest = new System.Windows.Forms.Label();
+            this.dgvSachTra = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnXoaSachTra = new System.Windows.Forms.Button();
+            this.dpkNgayTra = new System.Windows.Forms.DateTimePicker();
+            this.label25 = new System.Windows.Forms.Label();
+            this.btnLapPhieuTra = new System.Windows.Forms.Button();
+            this.cboDGPT = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.tabQLPhieu = new System.Windows.Forms.TabPage();
+            this.btnXoaPT = new System.Windows.Forms.Button();
+            this.btnShowPT = new System.Windows.Forms.Button();
+            this.btnShowPM = new System.Windows.Forms.Button();
+            this.btnPhieuTra = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btnXoaPM = new System.Windows.Forms.Button();
+            this.txtTKPhieu = new System.Windows.Forms.TextBox();
+            this.dgvPhieuMuon = new System.Windows.Forms.DataGridView();
+            this.dgvPhieuTra = new System.Windows.Forms.DataGridView();
             this.panQuanLySach = new System.Windows.Forms.Panel();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.dtgQuanLySach = new System.Windows.Forms.DataGridView();
@@ -103,7 +107,6 @@
             this.panDocGia = new System.Windows.Forms.Panel();
             this.txtTimKiemDocGia = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
             this.lblDocGia = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.lblSDT = new System.Windows.Forms.Label();
@@ -125,20 +128,17 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label2 = new System.Windows.Forms.Label();
-            this.dgvSachTra = new System.Windows.Forms.DataGridView();
-            this.lbltest = new System.Windows.Forms.Label();
-            this.btnXoaPT = new System.Windows.Forms.Button();
             this.panMain.SuspendLayout();
             this.panSidebar.SuspendLayout();
             this.panHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabQuanLyPhieu.SuspendLayout();
+            this.tabLPhieuMuon.SuspendLayout();
+            this.tabLPTra.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSachTra)).BeginInit();
             this.tabQLPhieu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuMuon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuTra)).BeginInit();
-            this.tabLPTra.SuspendLayout();
-            this.tabLPhieuMuon.SuspendLayout();
             this.panQuanLySach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgQuanLySach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._QuanLyThuVien1_0DataSet)).BeginInit();
@@ -146,7 +146,6 @@
             this.grpGioiTinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDocGia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVien10DataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSachTra)).BeginInit();
             this.SuspendLayout();
             // 
             // panMain
@@ -157,9 +156,9 @@
             this.panMain.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panMain.Controls.Add(this.panSidebar);
             this.panMain.Controls.Add(this.panHeader);
-            this.panMain.Controls.Add(this.tabQuanLyPhieu);
             this.panMain.Controls.Add(this.panQuanLySach);
             this.panMain.Controls.Add(this.panDocGia);
+            this.panMain.Controls.Add(this.tabQuanLyPhieu);
             this.panMain.Location = new System.Drawing.Point(2, 2);
             this.panMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panMain.Name = "panMain";
@@ -197,7 +196,7 @@
             this.btnExit2.Text = "Thoát";
             this.btnExit2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExit2.UseVisualStyleBackColor = false;
-            this.btnExit2.Click += new System.EventHandler(this.button2_Click);
+            this.btnExit2.Click += new System.EventHandler(this.btnExit2_Click);
             // 
             // btnQuanLyPhieu
             // 
@@ -291,7 +290,7 @@
             this.btnExit1.Size = new System.Drawing.Size(52, 56);
             this.btnExit1.TabIndex = 2;
             this.btnExit1.UseVisualStyleBackColor = false;
-            this.btnExit1.Click += new System.EventHandler(this.button9_Click);
+            this.btnExit1.Click += new System.EventHandler(this.btnExit1_Click);
             // 
             // lblHeader
             // 
@@ -328,200 +327,6 @@
             this.tabQuanLyPhieu.Size = new System.Drawing.Size(872, 538);
             this.tabQuanLyPhieu.TabIndex = 40;
             // 
-            // tabQLPhieu
-            // 
-            this.tabQLPhieu.Controls.Add(this.btnXoaPT);
-            this.tabQLPhieu.Controls.Add(this.btnShowPT);
-            this.tabQLPhieu.Controls.Add(this.btnShowPM);
-            this.tabQLPhieu.Controls.Add(this.btnPhieuTra);
-            this.tabQLPhieu.Controls.Add(this.label17);
-            this.tabQLPhieu.Controls.Add(this.btnXoaPM);
-            this.tabQLPhieu.Controls.Add(this.txtTKPhieu);
-            this.tabQLPhieu.Controls.Add(this.dgvPhieuMuon);
-            this.tabQLPhieu.Controls.Add(this.dgvPhieuTra);
-            this.tabQLPhieu.Location = new System.Drawing.Point(4, 22);
-            this.tabQLPhieu.Name = "tabQLPhieu";
-            this.tabQLPhieu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQLPhieu.Size = new System.Drawing.Size(864, 512);
-            this.tabQLPhieu.TabIndex = 0;
-            this.tabQLPhieu.Text = "Quản Lý Phiếu";
-            this.tabQLPhieu.UseVisualStyleBackColor = true;
-            // 
-            // btnShowPT
-            // 
-            this.btnShowPT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShowPT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnShowPT.Location = new System.Drawing.Point(597, 125);
-            this.btnShowPT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnShowPT.Name = "btnShowPT";
-            this.btnShowPT.Size = new System.Drawing.Size(147, 23);
-            this.btnShowPT.TabIndex = 37;
-            this.btnShowPT.Text = "Hiện phiếu trả";
-            this.btnShowPT.UseVisualStyleBackColor = true;
-            this.btnShowPT.Click += new System.EventHandler(this.btnShowPT_Click);
-            // 
-            // btnShowPM
-            // 
-            this.btnShowPM.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShowPM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnShowPM.Location = new System.Drawing.Point(85, 125);
-            this.btnShowPM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnShowPM.Name = "btnShowPM";
-            this.btnShowPM.Size = new System.Drawing.Size(147, 23);
-            this.btnShowPM.TabIndex = 36;
-            this.btnShowPM.Text = "Hiện phiếu Mượn";
-            this.btnShowPM.UseVisualStyleBackColor = true;
-            this.btnShowPM.Click += new System.EventHandler(this.btnShowPM_Click);
-            // 
-            // btnPhieuTra
-            // 
-            this.btnPhieuTra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPhieuTra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPhieuTra.Location = new System.Drawing.Point(262, 198);
-            this.btnPhieuTra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnPhieuTra.Name = "btnPhieuTra";
-            this.btnPhieuTra.Size = new System.Drawing.Size(123, 23);
-            this.btnPhieuTra.TabIndex = 35;
-            this.btnPhieuTra.Text = "Lập phiếu trả";
-            this.btnPhieuTra.UseVisualStyleBackColor = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(108, 46);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(69, 16);
-            this.label17.TabIndex = 30;
-            this.label17.Text = "Tìm kiếm:";
-            // 
-            // btnXoaPM
-            // 
-            this.btnXoaPM.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoaPM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnXoaPM.Location = new System.Drawing.Point(85, 198);
-            this.btnXoaPM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnXoaPM.Name = "btnXoaPM";
-            this.btnXoaPM.Size = new System.Drawing.Size(147, 23);
-            this.btnXoaPM.TabIndex = 24;
-            this.btnXoaPM.Text = "Xóa";
-            this.btnXoaPM.UseVisualStyleBackColor = true;
-            this.btnXoaPM.Click += new System.EventHandler(this.btnXoaP_Click_1);
-            // 
-            // txtTKPhieu
-            // 
-            this.txtTKPhieu.Location = new System.Drawing.Point(223, 45);
-            this.txtTKPhieu.Name = "txtTKPhieu";
-            this.txtTKPhieu.Size = new System.Drawing.Size(223, 23);
-            this.txtTKPhieu.TabIndex = 23;
-            this.txtTKPhieu.TextChanged += new System.EventHandler(this.txtTKPhieu_TextChanged);
-            // 
-            // dgvPhieuMuon
-            // 
-            this.dgvPhieuMuon.AllowUserToAddRows = false;
-            this.dgvPhieuMuon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvPhieuMuon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhieuMuon.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvPhieuMuon.Location = new System.Drawing.Point(3, 261);
-            this.dgvPhieuMuon.Name = "dgvPhieuMuon";
-            this.dgvPhieuMuon.ReadOnly = true;
-            this.dgvPhieuMuon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhieuMuon.Size = new System.Drawing.Size(858, 248);
-            this.dgvPhieuMuon.TabIndex = 14;
-            this.dgvPhieuMuon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuMuon_CellClick_1);
-            // 
-            // dgvPhieuTra
-            // 
-            this.dgvPhieuTra.AllowUserToAddRows = false;
-            this.dgvPhieuTra.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvPhieuTra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhieuTra.Location = new System.Drawing.Point(3, 261);
-            this.dgvPhieuTra.Name = "dgvPhieuTra";
-            this.dgvPhieuTra.ReadOnly = true;
-            this.dgvPhieuTra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhieuTra.Size = new System.Drawing.Size(858, 248);
-            this.dgvPhieuTra.TabIndex = 38;
-            this.dgvPhieuTra.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuTra_CellClick);
-            // 
-            // tabLPTra
-            // 
-            this.tabLPTra.Controls.Add(this.lbltest);
-            this.tabLPTra.Controls.Add(this.dgvSachTra);
-            this.tabLPTra.Controls.Add(this.label2);
-            this.tabLPTra.Controls.Add(this.btnXoaSachTra);
-            this.tabLPTra.Controls.Add(this.dpkNgayTra);
-            this.tabLPTra.Controls.Add(this.label25);
-            this.tabLPTra.Controls.Add(this.btnLapPhieuTra);
-            this.tabLPTra.Controls.Add(this.cboDGPT);
-            this.tabLPTra.Controls.Add(this.label27);
-            this.tabLPTra.Location = new System.Drawing.Point(4, 22);
-            this.tabLPTra.Name = "tabLPTra";
-            this.tabLPTra.Size = new System.Drawing.Size(864, 512);
-            this.tabLPTra.TabIndex = 0;
-            this.tabLPTra.Text = "Lập phiếu trả";
-            // 
-            // btnXoaSachTra
-            // 
-            this.btnXoaSachTra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoaSachTra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnXoaSachTra.Location = new System.Drawing.Point(585, 130);
-            this.btnXoaSachTra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnXoaSachTra.Name = "btnXoaSachTra";
-            this.btnXoaSachTra.Size = new System.Drawing.Size(147, 33);
-            this.btnXoaSachTra.TabIndex = 76;
-            this.btnXoaSachTra.Text = "Xóa";
-            this.btnXoaSachTra.UseVisualStyleBackColor = true;
-            this.btnXoaSachTra.Click += new System.EventHandler(this.btnXoaSachTra_Click);
-            // 
-            // dpkNgayTra
-            // 
-            this.dpkNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpkNgayTra.Location = new System.Drawing.Point(267, 279);
-            this.dpkNgayTra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dpkNgayTra.Name = "dpkNgayTra";
-            this.dpkNgayTra.Size = new System.Drawing.Size(210, 23);
-            this.dpkNgayTra.TabIndex = 75;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(154, 284);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(61, 16);
-            this.label25.TabIndex = 74;
-            this.label25.Text = "Ngày trả";
-            // 
-            // btnLapPhieuTra
-            // 
-            this.btnLapPhieuTra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLapPhieuTra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLapPhieuTra.Location = new System.Drawing.Point(319, 343);
-            this.btnLapPhieuTra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLapPhieuTra.Name = "btnLapPhieuTra";
-            this.btnLapPhieuTra.Size = new System.Drawing.Size(147, 33);
-            this.btnLapPhieuTra.TabIndex = 73;
-            this.btnLapPhieuTra.Text = "Lập phiếu trả";
-            this.btnLapPhieuTra.UseVisualStyleBackColor = true;
-            this.btnLapPhieuTra.Click += new System.EventHandler(this.btnLapPhieuTra_Click);
-            // 
-            // cboDGPT
-            // 
-            this.cboDGPT.FormattingEnabled = true;
-            this.cboDGPT.Location = new System.Drawing.Point(267, 50);
-            this.cboDGPT.Name = "cboDGPT";
-            this.cboDGPT.Size = new System.Drawing.Size(312, 24);
-            this.cboDGPT.TabIndex = 71;
-            this.cboDGPT.SelectedIndexChanged += new System.EventHandler(this.cboDGPT_SelectedIndexChanged);
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(154, 53);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(80, 16);
-            this.label27.TabIndex = 70;
-            this.label27.Text = "Mã độc Giả";
-            // 
             // tabLPhieuMuon
             // 
             this.tabLPhieuMuon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -540,10 +345,10 @@
             this.tabLPhieuMuon.Controls.Add(this.label21);
             this.tabLPhieuMuon.Controls.Add(this.txtMaDGPhieu);
             this.tabLPhieuMuon.Controls.Add(this.label24);
-            this.tabLPhieuMuon.Location = new System.Drawing.Point(4, 22);
+            this.tabLPhieuMuon.Location = new System.Drawing.Point(4, 25);
             this.tabLPhieuMuon.Name = "tabLPhieuMuon";
             this.tabLPhieuMuon.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLPhieuMuon.Size = new System.Drawing.Size(864, 512);
+            this.tabLPhieuMuon.Size = new System.Drawing.Size(864, 509);
             this.tabLPhieuMuon.TabIndex = 1;
             this.tabLPhieuMuon.Tag = "";
             this.tabLPhieuMuon.Text = "Lập phiếu mượn";
@@ -710,6 +515,240 @@
             this.label24.Size = new System.Drawing.Size(77, 16);
             this.label24.TabIndex = 16;
             this.label24.Text = "Mã độc giả";
+            // 
+            // tabLPTra
+            // 
+            this.tabLPTra.Controls.Add(this.lbltest);
+            this.tabLPTra.Controls.Add(this.dgvSachTra);
+            this.tabLPTra.Controls.Add(this.label2);
+            this.tabLPTra.Controls.Add(this.btnXoaSachTra);
+            this.tabLPTra.Controls.Add(this.dpkNgayTra);
+            this.tabLPTra.Controls.Add(this.label25);
+            this.tabLPTra.Controls.Add(this.btnLapPhieuTra);
+            this.tabLPTra.Controls.Add(this.cboDGPT);
+            this.tabLPTra.Controls.Add(this.label27);
+            this.tabLPTra.Location = new System.Drawing.Point(4, 25);
+            this.tabLPTra.Name = "tabLPTra";
+            this.tabLPTra.Size = new System.Drawing.Size(864, 509);
+            this.tabLPTra.TabIndex = 0;
+            this.tabLPTra.Text = "Lập phiếu trả";
+            // 
+            // lbltest
+            // 
+            this.lbltest.AutoSize = true;
+            this.lbltest.Location = new System.Drawing.Point(659, 47);
+            this.lbltest.Name = "lbltest";
+            this.lbltest.Size = new System.Drawing.Size(46, 16);
+            this.lbltest.TabIndex = 79;
+            this.lbltest.Text = "label3";
+            // 
+            // dgvSachTra
+            // 
+            this.dgvSachTra.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvSachTra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSachTra.Location = new System.Drawing.Point(266, 124);
+            this.dgvSachTra.Name = "dgvSachTra";
+            this.dgvSachTra.Size = new System.Drawing.Size(313, 120);
+            this.dgvSachTra.TabIndex = 78;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(154, 131);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.TabIndex = 77;
+            this.label2.Text = "Sách Trả";
+            // 
+            // btnXoaSachTra
+            // 
+            this.btnXoaSachTra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoaSachTra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXoaSachTra.Location = new System.Drawing.Point(585, 130);
+            this.btnXoaSachTra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXoaSachTra.Name = "btnXoaSachTra";
+            this.btnXoaSachTra.Size = new System.Drawing.Size(147, 33);
+            this.btnXoaSachTra.TabIndex = 76;
+            this.btnXoaSachTra.Text = "Xóa";
+            this.btnXoaSachTra.UseVisualStyleBackColor = true;
+            this.btnXoaSachTra.Click += new System.EventHandler(this.btnXoaSachTra_Click);
+            // 
+            // dpkNgayTra
+            // 
+            this.dpkNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpkNgayTra.Location = new System.Drawing.Point(267, 279);
+            this.dpkNgayTra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dpkNgayTra.Name = "dpkNgayTra";
+            this.dpkNgayTra.Size = new System.Drawing.Size(210, 23);
+            this.dpkNgayTra.TabIndex = 75;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(154, 284);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(61, 16);
+            this.label25.TabIndex = 74;
+            this.label25.Text = "Ngày trả";
+            // 
+            // btnLapPhieuTra
+            // 
+            this.btnLapPhieuTra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLapPhieuTra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLapPhieuTra.Location = new System.Drawing.Point(319, 343);
+            this.btnLapPhieuTra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLapPhieuTra.Name = "btnLapPhieuTra";
+            this.btnLapPhieuTra.Size = new System.Drawing.Size(147, 33);
+            this.btnLapPhieuTra.TabIndex = 73;
+            this.btnLapPhieuTra.Text = "Lập phiếu trả";
+            this.btnLapPhieuTra.UseVisualStyleBackColor = true;
+            this.btnLapPhieuTra.Click += new System.EventHandler(this.btnLapPhieuTra_Click);
+            // 
+            // cboDGPT
+            // 
+            this.cboDGPT.FormattingEnabled = true;
+            this.cboDGPT.Location = new System.Drawing.Point(267, 50);
+            this.cboDGPT.Name = "cboDGPT";
+            this.cboDGPT.Size = new System.Drawing.Size(312, 24);
+            this.cboDGPT.TabIndex = 71;
+            this.cboDGPT.SelectedIndexChanged += new System.EventHandler(this.cboDGPT_SelectedIndexChanged);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(154, 53);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(80, 16);
+            this.label27.TabIndex = 70;
+            this.label27.Text = "Mã độc Giả";
+            // 
+            // tabQLPhieu
+            // 
+            this.tabQLPhieu.Controls.Add(this.btnXoaPT);
+            this.tabQLPhieu.Controls.Add(this.btnShowPT);
+            this.tabQLPhieu.Controls.Add(this.btnShowPM);
+            this.tabQLPhieu.Controls.Add(this.btnPhieuTra);
+            this.tabQLPhieu.Controls.Add(this.label17);
+            this.tabQLPhieu.Controls.Add(this.btnXoaPM);
+            this.tabQLPhieu.Controls.Add(this.txtTKPhieu);
+            this.tabQLPhieu.Controls.Add(this.dgvPhieuMuon);
+            this.tabQLPhieu.Controls.Add(this.dgvPhieuTra);
+            this.tabQLPhieu.Location = new System.Drawing.Point(4, 25);
+            this.tabQLPhieu.Name = "tabQLPhieu";
+            this.tabQLPhieu.Padding = new System.Windows.Forms.Padding(3);
+            this.tabQLPhieu.Size = new System.Drawing.Size(864, 509);
+            this.tabQLPhieu.TabIndex = 0;
+            this.tabQLPhieu.Text = "Quản Lý Phiếu";
+            this.tabQLPhieu.UseVisualStyleBackColor = true;
+            // 
+            // btnXoaPT
+            // 
+            this.btnXoaPT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoaPT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXoaPT.Location = new System.Drawing.Point(597, 194);
+            this.btnXoaPT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXoaPT.Name = "btnXoaPT";
+            this.btnXoaPT.Size = new System.Drawing.Size(147, 23);
+            this.btnXoaPT.TabIndex = 39;
+            this.btnXoaPT.Text = "Xóa";
+            this.btnXoaPT.UseVisualStyleBackColor = true;
+            this.btnXoaPT.Click += new System.EventHandler(this.btnXoaPT_Click);
+            // 
+            // btnShowPT
+            // 
+            this.btnShowPT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowPT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnShowPT.Location = new System.Drawing.Point(597, 125);
+            this.btnShowPT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnShowPT.Name = "btnShowPT";
+            this.btnShowPT.Size = new System.Drawing.Size(147, 23);
+            this.btnShowPT.TabIndex = 37;
+            this.btnShowPT.Text = "Hiện phiếu trả";
+            this.btnShowPT.UseVisualStyleBackColor = true;
+            this.btnShowPT.Click += new System.EventHandler(this.btnShowPT_Click);
+            // 
+            // btnShowPM
+            // 
+            this.btnShowPM.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowPM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnShowPM.Location = new System.Drawing.Point(85, 125);
+            this.btnShowPM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnShowPM.Name = "btnShowPM";
+            this.btnShowPM.Size = new System.Drawing.Size(147, 23);
+            this.btnShowPM.TabIndex = 36;
+            this.btnShowPM.Text = "Hiện phiếu Mượn";
+            this.btnShowPM.UseVisualStyleBackColor = true;
+            this.btnShowPM.Click += new System.EventHandler(this.btnShowPM_Click);
+            // 
+            // btnPhieuTra
+            // 
+            this.btnPhieuTra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPhieuTra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPhieuTra.Location = new System.Drawing.Point(262, 198);
+            this.btnPhieuTra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPhieuTra.Name = "btnPhieuTra";
+            this.btnPhieuTra.Size = new System.Drawing.Size(123, 23);
+            this.btnPhieuTra.TabIndex = 35;
+            this.btnPhieuTra.Text = "Lập phiếu trả";
+            this.btnPhieuTra.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(108, 46);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(69, 16);
+            this.label17.TabIndex = 30;
+            this.label17.Text = "Tìm kiếm:";
+            // 
+            // btnXoaPM
+            // 
+            this.btnXoaPM.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoaPM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXoaPM.Location = new System.Drawing.Point(85, 198);
+            this.btnXoaPM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXoaPM.Name = "btnXoaPM";
+            this.btnXoaPM.Size = new System.Drawing.Size(147, 23);
+            this.btnXoaPM.TabIndex = 24;
+            this.btnXoaPM.Text = "Xóa";
+            this.btnXoaPM.UseVisualStyleBackColor = true;
+            this.btnXoaPM.Click += new System.EventHandler(this.btnXoaP_Click_1);
+            // 
+            // txtTKPhieu
+            // 
+            this.txtTKPhieu.Location = new System.Drawing.Point(223, 45);
+            this.txtTKPhieu.Name = "txtTKPhieu";
+            this.txtTKPhieu.Size = new System.Drawing.Size(223, 23);
+            this.txtTKPhieu.TabIndex = 23;
+            this.txtTKPhieu.TextChanged += new System.EventHandler(this.txtTKPhieu_TextChanged);
+            // 
+            // dgvPhieuMuon
+            // 
+            this.dgvPhieuMuon.AllowUserToAddRows = false;
+            this.dgvPhieuMuon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvPhieuMuon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhieuMuon.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvPhieuMuon.Location = new System.Drawing.Point(3, 258);
+            this.dgvPhieuMuon.Name = "dgvPhieuMuon";
+            this.dgvPhieuMuon.ReadOnly = true;
+            this.dgvPhieuMuon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPhieuMuon.Size = new System.Drawing.Size(858, 248);
+            this.dgvPhieuMuon.TabIndex = 14;
+            this.dgvPhieuMuon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuMuon_CellClick_1);
+            // 
+            // dgvPhieuTra
+            // 
+            this.dgvPhieuTra.AllowUserToAddRows = false;
+            this.dgvPhieuTra.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvPhieuTra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhieuTra.Location = new System.Drawing.Point(3, 261);
+            this.dgvPhieuTra.Name = "dgvPhieuTra";
+            this.dgvPhieuTra.ReadOnly = true;
+            this.dgvPhieuTra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPhieuTra.Size = new System.Drawing.Size(858, 248);
+            this.dgvPhieuTra.TabIndex = 38;
+            this.dgvPhieuTra.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuTra_CellClick);
             // 
             // panQuanLySach
             // 
@@ -958,7 +997,6 @@
             this.panDocGia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panDocGia.Controls.Add(this.txtTimKiemDocGia);
             this.panDocGia.Controls.Add(this.label1);
-            this.panDocGia.Controls.Add(this.btnClear);
             this.panDocGia.Controls.Add(this.lblDocGia);
             this.panDocGia.Controls.Add(this.txtSDT);
             this.panDocGia.Controls.Add(this.lblSDT);
@@ -978,6 +1016,7 @@
             this.panDocGia.Name = "panDocGia";
             this.panDocGia.Size = new System.Drawing.Size(876, 535);
             this.panDocGia.TabIndex = 38;
+            this.panDocGia.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panDocGia_MouseClick);
             // 
             // txtTimKiemDocGia
             // 
@@ -995,19 +1034,6 @@
             this.label1.Size = new System.Drawing.Size(65, 16);
             this.label1.TabIndex = 41;
             this.label1.Text = "Tìm kiếm";
-            // 
-            // btnClear
-            // 
-            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClear.Location = new System.Drawing.Point(652, 179);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(117, 28);
-            this.btnClear.TabIndex = 40;
-            this.btnClear.Text = "Làm Trống";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // lblDocGia
             // 
@@ -1175,6 +1201,10 @@
             // 
             // dtgDocGia
             // 
+            this.dtgDocGia.AllowUserToAddRows = false;
+            this.dtgDocGia.AllowUserToDeleteRows = false;
+            this.dtgDocGia.AllowUserToResizeRows = false;
+            this.dtgDocGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDocGia.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dtgDocGia.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dtgDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1209,46 +1239,6 @@
             this.columnHeader3.Text = "Số Lượng";
             this.columnHeader3.Width = 73;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(154, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
-            this.label2.TabIndex = 77;
-            this.label2.Text = "Sách Trả";
-            // 
-            // dgvSachTra
-            // 
-            this.dgvSachTra.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvSachTra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSachTra.Location = new System.Drawing.Point(266, 124);
-            this.dgvSachTra.Name = "dgvSachTra";
-            this.dgvSachTra.Size = new System.Drawing.Size(313, 120);
-            this.dgvSachTra.TabIndex = 78;
-            // 
-            // lbltest
-            // 
-            this.lbltest.AutoSize = true;
-            this.lbltest.Location = new System.Drawing.Point(659, 47);
-            this.lbltest.Name = "lbltest";
-            this.lbltest.Size = new System.Drawing.Size(46, 16);
-            this.lbltest.TabIndex = 79;
-            this.lbltest.Text = "label3";
-            // 
-            // btnXoaPT
-            // 
-            this.btnXoaPT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoaPT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnXoaPT.Location = new System.Drawing.Point(597, 194);
-            this.btnXoaPT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnXoaPT.Name = "btnXoaPT";
-            this.btnXoaPT.Size = new System.Drawing.Size(147, 23);
-            this.btnXoaPT.TabIndex = 39;
-            this.btnXoaPT.Text = "Xóa";
-            this.btnXoaPT.UseVisualStyleBackColor = true;
-            this.btnXoaPT.Click += new System.EventHandler(this.btnXoaPT_Click);
-            // 
             // QuanLySach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1268,14 +1258,15 @@
             this.panHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabQuanLyPhieu.ResumeLayout(false);
+            this.tabLPhieuMuon.ResumeLayout(false);
+            this.tabLPhieuMuon.PerformLayout();
+            this.tabLPTra.ResumeLayout(false);
+            this.tabLPTra.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSachTra)).EndInit();
             this.tabQLPhieu.ResumeLayout(false);
             this.tabQLPhieu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuMuon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuTra)).EndInit();
-            this.tabLPTra.ResumeLayout(false);
-            this.tabLPTra.PerformLayout();
-            this.tabLPhieuMuon.ResumeLayout(false);
-            this.tabLPhieuMuon.PerformLayout();
             this.panQuanLySach.ResumeLayout(false);
             this.panQuanLySach.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgQuanLySach)).EndInit();
@@ -1286,7 +1277,6 @@
             this.grpGioiTinh.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDocGia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVien10DataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSachTra)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1347,7 +1337,6 @@
         private System.Windows.Forms.ComboBox cmbTheLoai;
         private System.Windows.Forms.TextBox txtTimKiemDocGia;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox txtMaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn maSachDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenSachDataGridViewTextBoxColumn;
