@@ -50,3 +50,6 @@ D:\BTL_C#\QuanLyThuVien\bin\Debug\BUS.pdb
 D:\BTL_C#\QuanLyThuVien\bin\Debug\DAO.pdb
 D:\BTL_C#\QuanLyThuVien\bin\Debug\DTO.pdb
 D:\BTL_C#\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
+D:\BTL\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+D:\BTL\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+D:\BTL\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb

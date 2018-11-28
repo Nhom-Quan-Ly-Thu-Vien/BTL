@@ -9,10 +9,21 @@ namespace DTO
     public class Account
     {
         private string user;
+
+        public string User
+        {
+            get { return user; }
+            set { user = value; }
+        }
         private string password;
 
-        public string User { get => user; set => user = value; }
-        public string Password { get => password; set => password = value; }
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
+
+        
 
         public Account(string user, string pass)
         {
