@@ -1,0 +1,9 @@
+D:\BTL_C#\DAO\bin\Debug\DAO.dll
+D:\BTL_C#\DAO\bin\Debug\DAO.pdb
+D:\BTL_C#\DAO\bin\Debug\DTO.dll
+D:\BTL_C#\DAO\bin\Debug\DTO.pdb
+D:\BTL_C#\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+D:\BTL_C#\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\BTL_C#\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\BTL_C#\DAO\obj\Debug\DAO.dll
+D:\BTL_C#\DAO\obj\Debug\DAO.pdb

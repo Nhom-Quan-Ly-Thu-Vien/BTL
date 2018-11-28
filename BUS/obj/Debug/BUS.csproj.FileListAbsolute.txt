@@ -1,0 +1,11 @@
+D:\BTL_C#\BUS\bin\Debug\BUS.dll
+D:\BTL_C#\BUS\bin\Debug\BUS.pdb
+D:\BTL_C#\BUS\bin\Debug\DAO.dll
+D:\BTL_C#\BUS\bin\Debug\DTO.dll
+D:\BTL_C#\BUS\bin\Debug\DAO.pdb
+D:\BTL_C#\BUS\bin\Debug\DTO.pdb
+D:\BTL_C#\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\BTL_C#\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\BTL_C#\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\BTL_C#\BUS\obj\Debug\BUS.dll
+D:\BTL_C#\BUS\obj\Debug\BUS.pdb

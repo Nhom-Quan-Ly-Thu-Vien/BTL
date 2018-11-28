@@ -1,0 +1,10 @@
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\DAO\bin\Debug\DAO.exe.config
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\DAO\bin\Debug\DAO.exe
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\DAO\bin\Debug\DAO.pdb
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\DAO\bin\Debug\DTO.exe
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\DAO\bin\Debug\DTO.pdb
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\DAO\obj\Debug\DAO.Properties.Resources.resources
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\DAO\obj\Debug\DAO.csproj.GenerateResource.Cache
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\DAO\obj\Debug\DAO.exe
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\DAO\obj\Debug\DAO.pdb

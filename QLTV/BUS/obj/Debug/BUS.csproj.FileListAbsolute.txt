@@ -1,0 +1,12 @@
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\BUS\obj\Debug\BUS.Properties.Resources.resources
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\BUS\obj\Debug\BUS.csproj.GenerateResource.Cache
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\BUS\bin\Debug\BUS.exe.config
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\BUS\bin\Debug\BUS.exe
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\BUS\bin\Debug\BUS.pdb
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\BUS\bin\Debug\DAO.exe
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\BUS\bin\Debug\DTO.exe
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\BUS\bin\Debug\DAO.pdb
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\BUS\bin\Debug\DTO.pdb
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\BUS\obj\Debug\BUS.exe
+C:\Users\phamv\documents\visual studio 2013\Projects\Quanlythuvien\BUS\obj\Debug\BUS.pdb
