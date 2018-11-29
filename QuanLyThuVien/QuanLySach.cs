@@ -44,11 +44,22 @@ namespace QuanLyThuVien
             //code phần độc giả
             //Tăng mã tự động
             txtMaSach.Text = "MS" + (dtgQuanLySach.RowCount+1 < 11 ? "0" : "") + ((dtgQuanLySach.RowCount) );
-            txtMaDG.Text = "DG" + (dtgDocGia.RowCount + 1 < 11 ? "0" : "") + ((dtgDocGia.RowCount));
+            //txtMaDG.Text = "DG" + (dtgDocGia.RowCount + 1 < 11 ? "0" : "") + ((dtgDocGia.RowCount));
+            tangMaDG();
             //txtMaPhieu.Text = "MP" + (dgvPhieuMuon.RowCount + 1 < 11 ? "0" : "") + ((dgvPhieuMuon.RowCount));
 
             txtMaDG.Enabled = false;
         }
+
+        private void tangMaDG() //Tăng Mã Độc Giả
+        {
+            string str = (dtgDocGia.Rows[dtgDocGia.Rows.Count-1].Cells[0].Value.ToString()).Remove(0,2);
+            Int32 temp = Int32.Parse(str);
+            txtMaDG.Text = "DG"+ (temp+1 < 10 ?"0":"") + (temp+1);
+
+            //for(Int32 i = 0; )
+        }
+
         //show panel,form
         private void btnDocGia_Click(object sender, EventArgs e)
         {
@@ -95,15 +106,14 @@ namespace QuanLyThuVien
 
         //Code phần độc giả
 
-        private void btnThemDG_Click(object sender, EventArgs e)
+        private void btnThemDG_Click(object sender, EventArgs e) //Thêm DG
         {
             try
             {
-                txtMaDG.Text = "DG" + (dtgDocGia.RowCount + 1 < 10 ? "0" : "") + (dtgDocGia.RowCount);
+                //txtMaDG.Text = "DG" + (dtgDocGia.RowCount + 1 < 10 ? "0" : "") + (dtgDocGia.RowCount);
+                tangMaDG();
 
-                if (txtMaDG.Text == "")
-                    MessageBox.Show("Nhập mã độc giả.");
-                else if (txtTenDG.Text == "")
+                if (txtTenDG.Text == "")
                     MessageBox.Show("Nhập tên độc giả.");
                 else if (rdoNam.Checked == false && rdoNu.Checked == false)
                     MessageBox.Show("Chọn giới tính.");
@@ -140,7 +150,7 @@ namespace QuanLyThuVien
         {
             try
             {
-                if (txtMaDG.Text == "" && txtTenDG.Text == "" && rdoNam.Checked == false && rdoNu.Checked == false && txtDiaChi.Text == "" && txtSDT.Text == "")
+                if (txtTenDG.Text == "" && rdoNam.Checked == false && rdoNu.Checked == false && txtDiaChi.Text == "" && txtSDT.Text == "")
                     MessageBox.Show("Chọn độc giả.");
                 else
                 {
@@ -173,14 +183,15 @@ namespace QuanLyThuVien
         {
             try
             {
-                if (txtMaDG.Text == "" && txtTenDG.Text == "" && rdoNam.Checked == false && rdoNu.Checked == false && txtDiaChi.Text == "" && txtSDT.Text == "")
+                if (txtTenDG.Text == "" && rdoNam.Checked == false && rdoNu.Checked == false && txtDiaChi.Text == "" && txtSDT.Text == "")
                     MessageBox.Show("Chọn độc giả.");
                 else
                 {
+                    
                     DocGiaBUS.Instance.XoaDG(txtMaDG.Text);
+
+                        
                     QuanLySach_Load(sender, e);
-                    txtMaDG.Text = "DG" + (dtgDocGia.RowCount + 1 < 10 ? "0" : "") + ((dtgDocGia.RowCount));
-                    MessageBox.Show("Xóa thành công.");
                 }
 
             }
@@ -214,9 +225,7 @@ namespace QuanLyThuVien
                 row = e.RowIndex;
 
                 txtMaDG.Enabled = false;
-
                 txtMaDG.Text = dtgDocGia.Rows[row].Cells[0].Value.ToString();
-
                 txtTenDG.Text = dtgDocGia.Rows[row].Cells[1].Value.ToString();
 
                 String gioitinh = dtgDocGia.Rows[row].Cells[2].Value.ToString(); ;
@@ -224,7 +233,6 @@ namespace QuanLyThuVien
                 else rdoNu.Checked = true;
 
                 txtDiaChi.Text = dtgDocGia.Rows[row].Cells[3].Value.ToString();
-
                 txtSDT.Text = dtgDocGia.Rows[row].Cells[4].Value.ToString();
             }
             catch
@@ -235,9 +243,10 @@ namespace QuanLyThuVien
 
         private void panDocGia_MouseClick(object sender, MouseEventArgs e)
         {
-            txtMaDG.Text = "DG" + (dtgDocGia.RowCount + 1 < 10 ? "0" : "") + ((dtgDocGia.RowCount+1));
-
+            //txtMaDG.Text = "DG" + (dtgDocGia.RowCount + 1 < 10 ? "0" : "") + (dtgDocGia.RowCount+1);
+            tangMaDG();
             txtMaDG.Enabled = false;
+
             txtTenDG.Text = "";
             rdoNam.Checked = false;
             rdoNu.Checked = false;
@@ -556,6 +565,11 @@ namespace QuanLyThuVien
 
 
         }
+
+
+        //Kết thúc xóa PT
+
+        
 
     }
 }
