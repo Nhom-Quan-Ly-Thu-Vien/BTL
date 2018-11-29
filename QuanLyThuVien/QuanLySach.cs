@@ -187,10 +187,7 @@ namespace QuanLyThuVien
                     MessageBox.Show("Chọn độc giả.");
                 else
                 {
-                    
-                    DocGiaBUS.Instance.XoaDG(txtMaDG.Text);
-
-                        
+                    DocGiaBUS.Instance.XoaDG(txtMaDG.Text);  
                     QuanLySach_Load(sender, e);
                 }
 
