@@ -486,7 +486,7 @@ namespace QuanLyThuVien
 
         private void cmbTenDGPhieu_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            txtMaDGPhieu.Text = cmbTenDGPhieu.SelectedValue.ToString();
+            //txtMaDGPhieu.Text = cmbTenDGPhieu.SelectedValue.ToString();
         }
       
         private void dgvPhieuTra_CellClick(object sender, DataGridViewCellEventArgs e)
