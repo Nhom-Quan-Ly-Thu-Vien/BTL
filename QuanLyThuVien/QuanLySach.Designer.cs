@@ -189,10 +189,10 @@
             this.panMain.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panMain.Controls.Add(this.panSidebar);
             this.panMain.Controls.Add(this.panHeader);
-            this.panMain.Controls.Add(this.tabQuanLyPhieu);
-            this.panMain.Controls.Add(this.panThongKe);
             this.panMain.Controls.Add(this.panQuanLySach);
             this.panMain.Controls.Add(this.panDocGia);
+            this.panMain.Controls.Add(this.tabQuanLyPhieu);
+            this.panMain.Controls.Add(this.panThongKe);
             this.panMain.Location = new System.Drawing.Point(2, 2);
             this.panMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panMain.Name = "panMain";
