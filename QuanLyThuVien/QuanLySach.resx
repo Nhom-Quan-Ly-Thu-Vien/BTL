@@ -121,7 +121,7 @@
   <data name="btnThongKe.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAABRiSURBVGhD7VoJVFRXtr2FMUMbNIqonYRQ4Dx0OsOKabu/
+        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAABRiSURBVGhD7VoJVFRXtr2FMUMbNIqonYRQ4Dx0OsOKabu/
         iXZiG4PzgDiggAriFI04RlvjLK1xAkGMODLZCihRHEAFEQcUURFBAREQQQEZi6mq9t/3FZVFeumPYn7j
         X/3PWnvdV8V7r85++0z3qdDr9dDpdPhPMSHJ/kcRlgpL1Mfkg5LX1ui1qNYZIkWr0xq+5+eX0UTtWi8z
         UtLWrjWEjJWXOV6em7CWLPVkJElV6QpRcWMzir3fQfFCAc0KK+RvGIgqv2moOBeGSk2xcs3LJHa9FC4r
@@ -329,7 +329,7 @@
   <data name="btnQuanLySach.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEYAAAA9CAYAAAAQyx+GAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAABt4SURBVHhe7VsJfFT1uZ32VUWKC2AVtz59Vlu1ffVpX322
+        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAABt4SURBVHhe7VsJfFT1uZ32VUWKC2AVtz59Vlu1ffVpX322
         1S7PitZqKWpbLCqiIItsCooiyI5ECSFsYQnZITvZN5IQ1iRkX2Yy2Saz3WX2SQIBsnDe+d8JSNvwfvgE
         +nu/Hx98c+/cuczce+75zne+O4MOV2PIuArMBeIqMBeIq8BcIK4Cc4G4CswF4goBc2Ywzws+HWLruTj3
         2nn7ndsm4ox44R+2XrK4AsCIgz7FPM3s054PDJxBX59Y9vM5oLfKWB+Xh4gDdaj3dH55mr0iuU8/9+VG
@@ -631,8 +631,14 @@
   <metadata name="_QuanLyThuVien1_0DataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="_QuanLyThuVien1_0DataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="docGiaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>491, 17</value>
+  </metadata>
+  <metadata name="quanLyThuVien10DataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>221, 17</value>
   </metadata>
   <metadata name="quanLyThuVien10DataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>221, 17</value>

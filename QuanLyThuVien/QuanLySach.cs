@@ -70,6 +70,7 @@ namespace QuanLyThuVien
             panDocGia.Show();
             panQuanLySach.Hide();
             tabQuanLyPhieu.Hide();
+            panThongKe.Hide();
         }
 
         private void btnExit1_Click(object sender, EventArgs e)
@@ -83,6 +84,7 @@ namespace QuanLyThuVien
         {
             panQuanLySach.Show();
             panDocGia.Hide();
+            panThongKe.Hide();
             tabQuanLyPhieu.Hide();
           
         }
@@ -91,7 +93,9 @@ namespace QuanLyThuVien
         {
             panQuanLySach.Hide();
             panDocGia.Hide();
+            panThongKe.Hide();
             tabQuanLyPhieu.Show();
+            
 
             tabQuanLyPhieu.SelectedTab = tabQuanLyPhieu.TabPages[0];
             cmbTenDGPhieu.Text = "";
@@ -209,13 +213,19 @@ namespace QuanLyThuVien
 
         private void btnLapPhieuMuon_Click(object sender, EventArgs e)
         {
-            panQuanLySach.Hide();
-            panDocGia.Hide();
-            tabQuanLyPhieu.Show();
+            if (txtTenDG.Text == "")
+                MessageBox.Show("Vui lòng chọn độc giả.");
+            else
+            {
+                panQuanLySach.Hide();
+                panDocGia.Hide();
+                tabQuanLyPhieu.Show();
 
-            txtMaDGPhieu.Text=txtMaDG.Text;
-            cmbTenDGPhieu.SelectedValue = txtMaDGPhieu.Text;
-            tabQuanLyPhieu.SelectedTab = tabQuanLyPhieu.TabPages[0];
+                txtMaDGPhieu.Text = txtMaDG.Text;
+                cmbTenDGPhieu.SelectedValue = txtMaDGPhieu.Text;
+                tabQuanLyPhieu.SelectedTab = tabQuanLyPhieu.TabPages[0];
+            }
+            
             
         }
 
@@ -376,7 +386,7 @@ namespace QuanLyThuVien
         {
            dgvPhieuMuon.DataSource= PhieuMuonBUS.Instance.LookPhieuMuon(txtTKPhieu.Text);
 
-            dgvPhieuTra.DataSource= PhieuMuonBUS.Instance.LookPhieuTra(txtTKPhieu.Text);
+           dgvPhieuTra.DataSource= PhieuMuonBUS.Instance.LookPhieuTra(txtTKPhieu.Text);
         }
         //Xóa Bên Phiếu Mượn
         private void btnXoaP_Click_1(object sender, EventArgs e)
@@ -496,7 +506,15 @@ namespace QuanLyThuVien
 
         private void cmbTenDGPhieu_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            txtMaDGPhieu.Text = cmbTenDGPhieu.SelectedValue.ToString();
+            try
+            {
+                txtMaDGPhieu.Text = cmbTenDGPhieu.SelectedValue.ToString();
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Mã DG trống.");
+            }
+            
         }
       
         private void dgvPhieuTra_CellClick(object sender, DataGridViewCellEventArgs e)
