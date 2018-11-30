@@ -17,6 +17,9 @@ namespace QuanLyThuVien
         int row;
         private void QuanLySach_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_QuanLyThuVien1_0DataSet.DocGia' table. You can move, or remove it, as needed.
+            //this.docGiaTableAdapter.Fill(this._QuanLyThuVien1_0DataSet.DocGia);
+            
             dtgQuanLySach.DataSource = SachBUS.Instance.ShowSach();
             dtgDocGia.DataSource = DocGiaBUS.Instance.ShowDG();
             dgvPhieuMuon.DataSource = PhieuMuonBUS.Instance.LoadPhieuMuon();
@@ -49,6 +52,8 @@ namespace QuanLyThuVien
             //txtMaPhieu.Text = "MP" + (dgvPhieuMuon.RowCount + 1 < 11 ? "0" : "") + ((dgvPhieuMuon.RowCount));
 
             txtMaDG.Enabled = false;
+
+            
         }
 
         private void tangMaDG() //Tăng Mã Độc Giả
@@ -57,7 +62,6 @@ namespace QuanLyThuVien
             Int32 temp = Int32.Parse(str);
             txtMaDG.Text = "DG"+ (temp+1 < 10 ?"0":"") + (temp+1);
 
-            //for(Int32 i = 0; )
         }
 
         //show panel,form
@@ -74,11 +78,6 @@ namespace QuanLyThuVien
             if (drl == DialogResult.Yes) Application.Exit();
         }
 
-        private void btnExit2_Click(object sender, EventArgs e)
-        {
-            DialogResult drl = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (drl == DialogResult.Yes) Application.Exit();
-        }
 
         private void btnQuanLySach_Click(object sender, EventArgs e)
         {
@@ -95,6 +94,7 @@ namespace QuanLyThuVien
             tabQuanLyPhieu.Show();
 
             tabQuanLyPhieu.SelectedTab = tabQuanLyPhieu.TabPages[0];
+            cmbTenDGPhieu.Text = "";
             cmbTenSachPhieu.SelectedIndex = -1;       
             lstSachMuon.Items.Clear();
             txtMaDGPhieu.Text = "";
@@ -103,6 +103,13 @@ namespace QuanLyThuVien
             cboDGPT.SelectedIndex = -1;
         }
 
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            panQuanLySach.Hide();
+            panDocGia.Hide();
+            tabQuanLyPhieu.Hide();
+            panThongKe.Show();
+        }
 
         //Code phần độc giả
 
@@ -183,9 +190,11 @@ namespace QuanLyThuVien
         {
             try
             {
+                //DialogResult dlr = MessageBox.Show("Mọi thông tin về độc giả '"+txtTenDG.Text+"' sẽ bị xóa vĩnh viễn.\nBạn muốn tiếp tục?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
                 if (txtTenDG.Text == "" && rdoNam.Checked == false && rdoNu.Checked == false && txtDiaChi.Text == "" && txtSDT.Text == "")
                     MessageBox.Show("Chọn độc giả.");
-                else
+                else //if(dlr == DialogResult.Yes)
                 {
                     DocGiaBUS.Instance.XoaDG(txtMaDG.Text);  
                     QuanLySach_Load(sender, e);
@@ -203,6 +212,7 @@ namespace QuanLyThuVien
             panQuanLySach.Hide();
             panDocGia.Hide();
             tabQuanLyPhieu.Show();
+
             txtMaDGPhieu.Text=txtMaDG.Text;
             cmbTenDGPhieu.SelectedValue = txtMaDGPhieu.Text;
             tabQuanLyPhieu.SelectedTab = tabQuanLyPhieu.TabPages[0];
@@ -486,7 +496,7 @@ namespace QuanLyThuVien
 
         private void cmbTenDGPhieu_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            //txtMaDGPhieu.Text = cmbTenDGPhieu.SelectedValue.ToString();
+            txtMaDGPhieu.Text = cmbTenDGPhieu.SelectedValue.ToString();
         }
       
         private void dgvPhieuTra_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -557,11 +567,13 @@ namespace QuanLyThuVien
             {
                 return;
             }
-           
-            
+
+
 
 
         }
+
+        
 
 
         //Kết thúc xóa PT

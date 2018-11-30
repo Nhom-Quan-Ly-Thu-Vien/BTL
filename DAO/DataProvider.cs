@@ -45,6 +45,7 @@ namespace DAO
             }
             return data;
         }
+
         public void ExecuteNonQuery(string query)
         {
             using (SqlConnection conn = new SqlConnection(connection))
