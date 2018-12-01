@@ -8,6 +8,14 @@ namespace DTO
 {
     public class PhieuMuon
     {
+        private string maPhieu;
+
+        public string MaPhieu
+        {
+            get { return maPhieu; }
+            set { maPhieu = value; }
+        }
+
         private string maDG;
 
         public string MaDG
@@ -37,13 +45,14 @@ namespace DTO
             set { ngayMuon = value; }
         }
         
-
+      
        
        
        
 
-        public PhieuMuon(string mdg, string ms,int sl ,DateTime nm)
+        public PhieuMuon(string mp,string mdg, string ms,int sl ,DateTime nm)
         {
+            MaPhieu = mp;
             MaDG = mdg;
             MaSach = ms;
             SoLuong = sl;

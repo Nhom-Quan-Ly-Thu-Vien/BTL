@@ -14,3 +14,12 @@ D:\BTL\DAO\bin\Debug\DTO.pdb
 D:\BTL\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 D:\BTL\DAO\obj\Debug\DAO.dll
 D:\BTL\DAO\obj\Debug\DAO.pdb
+C:\Users\Administrator\Desktop\BTL\DAO\bin\Debug\DAO.dll
+C:\Users\Administrator\Desktop\BTL\DAO\bin\Debug\DAO.pdb
+C:\Users\Administrator\Desktop\BTL\DAO\bin\Debug\DTO.dll
+C:\Users\Administrator\Desktop\BTL\DAO\bin\Debug\DTO.pdb
+C:\Users\Administrator\Desktop\BTL\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\BTL\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\BTL\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\Administrator\Desktop\BTL\DAO\obj\Debug\DAO.dll
+C:\Users\Administrator\Desktop\BTL\DAO\obj\Debug\DAO.pdb

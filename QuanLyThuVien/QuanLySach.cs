@@ -44,27 +44,32 @@ namespace QuanLyThuVien
             cboDGPT.ValueMember = "MaDocGia";
 
 
-            //code phần độc giả
-            //Tăng mã tự động
-            txtMaSach.Text = "MS" + (dtgQuanLySach.RowCount+1 < 11 ? "0" : "") + ((dtgQuanLySach.RowCount) );
-            //txtMaDG.Text = "DG" + (dtgDocGia.RowCount + 1 < 11 ? "0" : "") + ((dtgDocGia.RowCount));
-            tangMaDG();
-            //txtMaPhieu.Text = "MP" + (dgvPhieuMuon.RowCount + 1 < 11 ? "0" : "") + ((dgvPhieuMuon.RowCount));
+         
+            //Tăng mã tự động          
+            tangMa("DG",dtgDocGia,txtMaDG);
+            tangMa("MS", dtgQuanLySach,txtMaSach);
 
             txtMaDG.Enabled = false;
 
             
         }
 
-        private void tangMaDG() //Tăng Mã Độc Giả
+        private void tangMa(string ch,DataGridView dataGridView,TextBox textBox) //Tăng Mã Độc Giả
         {
-            string str = (dtgDocGia.Rows[dtgDocGia.Rows.Count-1].Cells[0].Value.ToString()).Remove(0,2);
-            Int32 temp = Int32.Parse(str);
-            txtMaDG.Text = "DG"+ (temp+1 < 10 ?"0":"") + (temp+1);
+            if (dataGridView.Rows.Count == 0)
+                textBox.Text = ch + "00";
+            else
+            {
+                string str = (dataGridView.Rows[dataGridView.Rows.Count - 1].Cells[0].Value.ToString()).Remove(0, 2);
+                Int32 temp = Int32.Parse(str);
+                textBox.Text = ch + (temp + 1 < 10 ? "0" : "") + (temp + 1);
+            }
+           
 
         }
 
         //show panel,form
+        #region
         private void btnDocGia_Click(object sender, EventArgs e)
         {
             panDocGia.Show();
@@ -95,8 +100,8 @@ namespace QuanLyThuVien
             panDocGia.Hide();
             panThongKe.Hide();
             tabQuanLyPhieu.Show();
-            
 
+            tangMa("MP", dgvPhieuMuon, txtmaPhieu);
             tabQuanLyPhieu.SelectedTab = tabQuanLyPhieu.TabPages[0];
             cmbTenDGPhieu.Text = "";
             cmbTenSachPhieu.SelectedIndex = -1;       
@@ -114,15 +119,15 @@ namespace QuanLyThuVien
             tabQuanLyPhieu.Hide();
             panThongKe.Show();
         }
-
+        #endregion
         //Code phần độc giả
-
+        #region
         private void btnThemDG_Click(object sender, EventArgs e) //Thêm DG
         {
             try
             {
                 //txtMaDG.Text = "DG" + (dtgDocGia.RowCount + 1 < 10 ? "0" : "") + (dtgDocGia.RowCount);
-                tangMaDG();
+                tangMa("DG",dtgDocGia,txtMaDG);
 
                 if (txtTenDG.Text == "")
                     MessageBox.Show("Nhập tên độc giả.");
@@ -135,7 +140,6 @@ namespace QuanLyThuVien
                     String gioitinh;
                     if (rdoNam.Checked) gioitinh = "Nam";
                     else gioitinh = "Nữ";
-
                     Double value;
                     if (Double.TryParse(txtSDT.Text, out value) == false)
                         MessageBox.Show("Số điện thoại phải là số.");
@@ -223,7 +227,7 @@ namespace QuanLyThuVien
 
                 txtMaDGPhieu.Text = txtMaDG.Text;
                 cmbTenDGPhieu.SelectedValue = txtMaDGPhieu.Text;
-                tabQuanLyPhieu.SelectedTab = tabQuanLyPhieu.TabPages[0];
+                tabQuanLyPhieu.SelectedTab = tabQuanLyPhieu.TabPages[1];
             }
             
             
@@ -261,19 +265,18 @@ namespace QuanLyThuVien
         private void panDocGia_MouseClick(object sender, MouseEventArgs e)
         {
             //txtMaDG.Text = "DG" + (dtgDocGia.RowCount + 1 < 10 ? "0" : "") + (dtgDocGia.RowCount+1);
-            tangMaDG();
+            tangMa("DG",dtgDocGia,txtMaDG);
             txtMaDG.Enabled = false;
-
             txtTenDG.Text = "";
             rdoNam.Checked = false;
             rdoNu.Checked = false;
             txtDiaChi.Text = "";
             txtSDT.Text = "";
         }
-        // Kết thúc Độc Giả
-
+        #endregion
+        
         //Code Quản lý sách
-
+        #region
         private void dtgQuanLySach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -295,19 +298,16 @@ namespace QuanLyThuVien
 
         private void btnThemSach_Click(object sender, EventArgs e)
         {
-            
-            //if (txtMaSach.TextLength == 0) MessageBox.Show("Mã sách không được để trông.");
              if (txtTenSach.TextLength == 0) MessageBox.Show("Tên sách không được để trống.");
             else if (txtSoLuong.TextLength == 0) MessageBox.Show("vui lòng nhập số lượng");
             else
             {
                 try
                 {
+                    tangMa("MS",dtgQuanLySach,txtMaSach);
                     Sach sach = new Sach(txtMaSach.Text, txtTenSach.Text, (cmbTheLoai.SelectedValue.ToString()), int.Parse(txtSoLuong.Text), txtTacGia.Text);
                     SachBUS.Instance.AddBook(sach);
-                    QuanLySach_Load(sender, e);
-                    txtMaSach.Text = "MS" + (dtgQuanLySach.RowCount+1 < 11 ? "0" : "") + ((dtgQuanLySach.RowCount) + 1);
-                    txtMaSach.Text = "MS" + (dtgQuanLySach.RowCount + 1 < 11 ? "0" : "") + ((dtgQuanLySach.RowCount) );
+                    QuanLySach_Load(sender, e);                 
                 }
                 catch (SqlException)
                 {
@@ -369,17 +369,14 @@ namespace QuanLyThuVien
 
         private void panQuanLySach_Click(object sender, EventArgs e)
         {
-            //txtMaSach.Enabled = true;
+            txtMaSach.Enabled = false;
+            tangMa("MS", dtgQuanLySach,txtMaSach);        
             txtTenSach.Text = "";
             txtSoLuong.Text = "";
-            txtTacGia.Text = "";
-            txtMaSach.Text = "MS" + (dtgQuanLySach.RowCount + 1 < 11 ? "0" : "") + ((dtgQuanLySach.RowCount));
+            txtTacGia.Text = "";                
         }
+        #endregion
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
         //Quản Lý Phiếu Mượn Trả
 
         private void txtTKPhieu_TextChanged(object sender, EventArgs e)
@@ -394,9 +391,10 @@ namespace QuanLyThuVien
             try
             {
                 int currentIndex = dgvPhieuMuon.CurrentCell.RowIndex;
-                string mdg = dgvPhieuMuon.Rows[currentIndex].Cells[0].Value.ToString();
-                string ms = dgvPhieuMuon.Rows[currentIndex].Cells[1].Value.ToString();
-                PhieuMuonBUS.Instance.DeletePhieu(mdg, ms);
+                string mp = dgvPhieuMuon.Rows[currentIndex].Cells[0].Value.ToString();
+                string mdg = dgvPhieuMuon.Rows[currentIndex].Cells[1].Value.ToString();
+                string ms = dgvPhieuMuon.Rows[currentIndex].Cells[2].Value.ToString();
+                PhieuMuonBUS.Instance.DeletePhieu(mp,mdg, ms);
                 dgvPhieuMuon.DataSource = PhieuMuonBUS.Instance.LoadPhieuMuon();
             }
             catch 
@@ -421,7 +419,7 @@ namespace QuanLyThuVien
             dgvPhieuTra.Hide();
             dgvPhieuMuon.Show();
             dgvPhieuMuon.DataSource = PhieuMuonBUS.Instance.LoadPhieuMuon();
-
+            tangMa("MP", dgvPhieuMuon, txtmaPhieu);
         }
 
         private void btnThemPhieu_Click_1(object sender, EventArgs e)
@@ -434,6 +432,7 @@ namespace QuanLyThuVien
             else
             try
             {
+                    tangMa("MP", dgvPhieuMuon, txtmaPhieu);
                 row = lstSachMuon.Items.Count;
                 lstSachMuon.Items.Add(cmbTenSachPhieu.SelectedValue.ToString());
                 lstSachMuon.Items[row].SubItems.Add(cmbTenSachPhieu.Text);
@@ -469,7 +468,7 @@ namespace QuanLyThuVien
             {
                 for (int i = 0; i < lstSachMuon.Items.Count; i++)
                 {
-                    PhieuMuon phieu = new PhieuMuon(txtMaDGPhieu.Text, lstSachMuon.Items[i].SubItems[0].Text, int.Parse(lstSachMuon.Items[i].SubItems[2].Text), dpkNgayMuon.Value);
+                    PhieuMuon phieu = new PhieuMuon(txtmaPhieu.Text,txtMaDGPhieu.Text, lstSachMuon.Items[i].SubItems[0].Text, int.Parse(lstSachMuon.Items[i].SubItems[2].Text), dpkNgayMuon.Value);
                     PhieuMuonBUS.Instance.AddPhieuMuon(phieu);
                 }
                 QuanLySach_Load(sender, e);
@@ -563,11 +562,8 @@ namespace QuanLyThuVien
                     PhieuMuonBUS.Instance.AddPhieuTra(ngaytra, masach, cboDGPT.Text);
                     dgvSachTra.DataSource = PhieuMuonBUS.Instance.GetSachTra(cboDGPT.Text);
                 }
-
                 MessageBox.Show("Ok");
-            }
-           
-
+            }        
         }
 
         //Xóa Bên Phiếu Trả
@@ -576,9 +572,10 @@ namespace QuanLyThuVien
             try
             {
                 int currentIndex = dgvPhieuTra.CurrentCell.RowIndex;
-                string mdg2 = dgvPhieuTra.Rows[currentIndex].Cells[0].Value.ToString();
-                string ms2 = dgvPhieuTra.Rows[currentIndex].Cells[1].Value.ToString();
-                PhieuMuonBUS.Instance.DeletePhieu(mdg2, ms2);
+                string mp= dgvPhieuTra.Rows[currentIndex].Cells[0].Value.ToString();
+                string mdg2 = dgvPhieuTra.Rows[currentIndex].Cells[1].Value.ToString();
+                string ms2 = dgvPhieuTra.Rows[currentIndex].Cells[2].Value.ToString();
+                PhieuMuonBUS.Instance.DeletePhieu(mp,mdg2, ms2);
                 dgvPhieuTra.DataSource = PhieuMuonBUS.Instance.LoadPhieuTra();
             }
             catch 
@@ -591,12 +588,19 @@ namespace QuanLyThuVien
 
         }
 
-        
+        private void btnPhieuTra_Click(object sender, EventArgs e)
+        {
+            int currenIndex = dgvPhieuMuon.CurrentCell.RowIndex;
+            cboDGPT.Text = dgvPhieuMuon.Rows[currenIndex].Cells[0].Value.ToString();
+            tabQuanLyPhieu.SelectedTab = tabQuanLyPhieu.TabPages[2];
+        }
+
+
 
 
         //Kết thúc xóa PT
 
-        
+
 
     }
 }

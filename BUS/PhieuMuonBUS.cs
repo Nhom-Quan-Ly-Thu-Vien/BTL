@@ -57,9 +57,9 @@ namespace BUS
         {
             PhieuMuonDAO.Instance.AddPhieuTra(ngayTra, masach,madg);
         }
-        public void DeletePhieu(string mdg, string ms)
+        public void DeletePhieu(string mp,string mdg, string ms)
         {
-            PhieuMuonDAO.Instance.DeletePhieu(mdg,ms);
+            PhieuMuonDAO.Instance.DeletePhieu(mp,mdg,ms);
         }
     }
 }

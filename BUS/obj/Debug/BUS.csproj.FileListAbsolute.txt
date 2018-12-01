@@ -18,3 +18,14 @@ D:\BTL\BUS\bin\Debug\DTO.pdb
 D:\BTL\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 D:\BTL\BUS\obj\Debug\BUS.dll
 D:\BTL\BUS\obj\Debug\BUS.pdb
+C:\Users\Administrator\Desktop\BTL\BUS\bin\Debug\BUS.dll
+C:\Users\Administrator\Desktop\BTL\BUS\bin\Debug\BUS.pdb
+C:\Users\Administrator\Desktop\BTL\BUS\bin\Debug\DAO.dll
+C:\Users\Administrator\Desktop\BTL\BUS\bin\Debug\DTO.dll
+C:\Users\Administrator\Desktop\BTL\BUS\bin\Debug\DAO.pdb
+C:\Users\Administrator\Desktop\BTL\BUS\bin\Debug\DTO.pdb
+C:\Users\Administrator\Desktop\BTL\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\BTL\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\BTL\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\Administrator\Desktop\BTL\BUS\obj\Debug\BUS.dll
+C:\Users\Administrator\Desktop\BTL\BUS\obj\Debug\BUS.pdb

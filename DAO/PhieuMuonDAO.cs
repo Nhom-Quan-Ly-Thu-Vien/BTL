@@ -26,7 +26,7 @@ namespace DAO
 
         public DataTable LoadPhieuMuon()
         {
-            string query = "Select MaDocGia,MaSach,SoLuong,NgayMuon From PhieuMuon Where NgayTra Is Null";
+            string query = "Select  MaPhieu,MaDocGia,MaSach,SoLuong,NgayMuon From PhieuMuon Where NgayTra Is Null";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -44,7 +44,7 @@ namespace DAO
 
         public DataTable GetMaDG()
         {
-            string query = "Select Distinct MaDocGia From PhieuMuon";
+            string query = "Select Distinct MaDocGia From PhieuMuon Where NgayTra IS NULL";
 
             DataTable data =DataProvider.Instance.ExecuteQuery(query);
 
@@ -62,7 +62,7 @@ namespace DAO
 
         public DataTable LookPhieuMuon(string dk)
         {
-            string query = "Select MaDocGia,MaSach,SoLuong,NgayMuon From PhieuMuon Where NgayTra Is Null AND (MaDocGia LIKE '%"+dk+"%' OR MaSach LIKE '%"+dk+"%' OR SoLuong LIKE '%"+dk+"%' OR NgayMuon LIKE '%"+dk+"%')";
+            string query = "Select MaPhieu,MaDocGia,MaSach,SoLuong,NgayMuon From PhieuMuon Where NgayTra Is Null AND (MaPhieu LIKE '%"+dk+"%' OR MaDocGia LIKE '%"+dk+"%' OR MaSach LIKE '%"+dk+"%' OR SoLuong LIKE '%"+dk+"%' OR NgayMuon LIKE '%"+dk+"%')";
 
             DataTable data= DataProvider.Instance.ExecuteQuery(query);
 
@@ -72,7 +72,7 @@ namespace DAO
         
         public DataTable LookPhieuTra(string dk)
         {
-            string query = "Select * From PhieuMuon Where  NgayTra Is Not Null AND (MaDocGia LIKE '%" + dk + "%' OR MaSach LIKE '%" + dk + "%' OR SoLuong LIKE '%" + dk + "%' OR NgayMuon LIKE '%" + dk + "%' OR NgayTra LIKE '%"+dk+"%')";
+            string query = "Select * From PhieuMuon Where  NgayTra Is Not Null AND (MaPhieu LIKE '%" + dk + "%' OR MaDocGia LIKE '%" + dk + "%' OR MaSach LIKE '%" + dk + "%' OR SoLuong LIKE '%" + dk + "%' OR NgayMuon LIKE '%" + dk + "%' OR NgayTra LIKE '%"+dk+"%')";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -81,7 +81,7 @@ namespace DAO
 
         public void AddPhieuMuon(PhieuMuon phieu)
         {
-            string query = "Insert Into PhieuMuon(MaDocGia,MaSach,SoLuong,NgayMuon) Values('"+phieu.MaDG+"','"+phieu.MaSach+"','"+phieu.SoLuong+"','"+phieu.NgayMuon+"')";
+            string query = "Insert Into PhieuMuon(MaPhieu,MaDocGia,MaSach,SoLuong,NgayMuon) Values('"+phieu.MaPhieu+"','"+phieu.MaDG+"','"+phieu.MaSach+"','"+phieu.SoLuong+"','"+phieu.NgayMuon+"')";
 
             DataProvider.Instance.ExecuteNonQuery(query);
         }
@@ -93,9 +93,9 @@ namespace DAO
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 
-        public void DeletePhieu(string mdg, string ms)
+        public void DeletePhieu(string mp,string mdg, string ms)
         {
-            string query = "Delete  PhieuMuon Where MaDocGia='"+mdg+"' AND MaSach='"+ms+"'";
+            string query = "Delete  PhieuMuon Where MaPhieu='"+mp+"' AND MaDocGia='"+mdg+"' AND MaSach='"+ms+"'";
 
             DataProvider.Instance.ExecuteNonQuery(query);
         }

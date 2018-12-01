@@ -9,3 +9,9 @@ D:\BTL\DTO\bin\Debug\DTO.pdb
 D:\BTL\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 D:\BTL\DTO\obj\Debug\DTO.dll
 D:\BTL\DTO\obj\Debug\DTO.pdb
+C:\Users\Administrator\Desktop\BTL\DTO\bin\Debug\DTO.dll
+C:\Users\Administrator\Desktop\BTL\DTO\bin\Debug\DTO.pdb
+C:\Users\Administrator\Desktop\BTL\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\BTL\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\BTL\DTO\obj\Debug\DTO.dll
+C:\Users\Administrator\Desktop\BTL\DTO\obj\Debug\DTO.pdb
