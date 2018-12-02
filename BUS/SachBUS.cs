@@ -62,9 +62,11 @@ namespace BUS
                 DataTable data = SachDAO.Instance.getSLuong(MaSach);
                 string s = data.Rows[0]["SoLuong"].ToString();
                 return s;
-            
+        }
 
-            
+        public void UpdateSLBook(int sl, string ms)
+        {
+            SachDAO.Instance.UpdateSLBook(sl,ms);
         }
     }
 }

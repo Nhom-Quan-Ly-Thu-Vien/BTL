@@ -86,9 +86,9 @@ namespace DAO
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 
-        public void AddPhieuTra(DateTime ngayTra,string masach,string madg)
+        public void AddPhieuTra(DateTime ngayTra,string masach,string mp)
         {
-            string query = "Update PhieuMuon SET NgayTra='"+ngayTra+"' Where MaSach='"+masach+"' AND MaDocGia='"+madg+"'";
+            string query = "Update PhieuMuon SET NgayTra='"+ngayTra+"' Where MaSach='"+masach+"' AND MaPhieu='"+mp+"'";
 
             DataProvider.Instance.ExecuteNonQuery(query);
         }

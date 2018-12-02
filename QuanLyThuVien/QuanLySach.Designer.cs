@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLySach));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panMain = new System.Windows.Forms.Panel();
             this.panSidebar = new System.Windows.Forms.Panel();
             this.btnThongKe = new System.Windows.Forms.Button();
@@ -161,6 +161,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.docGiaTableAdapter = new QuanLyThuVien._QuanLyThuVien1_0DataSetTableAdapters.DocGiaTableAdapter();
             this.lblHienCo = new System.Windows.Forms.Label();
+            this.txtMpTra = new System.Windows.Forms.TextBox();
             this.panMain.SuspendLayout();
             this.panSidebar.SuspendLayout();
             this.panHeader.SuspendLayout();
@@ -191,10 +192,10 @@
             this.panMain.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panMain.Controls.Add(this.panSidebar);
             this.panMain.Controls.Add(this.panHeader);
-            this.panMain.Controls.Add(this.panQuanLySach);
-            this.panMain.Controls.Add(this.panDocGia);
             this.panMain.Controls.Add(this.tabQuanLyPhieu);
             this.panMain.Controls.Add(this.panThongKe);
+            this.panMain.Controls.Add(this.panQuanLySach);
+            this.panMain.Controls.Add(this.panDocGia);
             this.panMain.Location = new System.Drawing.Point(2, 2);
             this.panMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panMain.Name = "panMain";
@@ -359,8 +360,8 @@
             // 
             this.tabQuanLyPhieu.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabQuanLyPhieu.Controls.Add(this.tabQLPhieu);
-            this.tabQuanLyPhieu.Controls.Add(this.tabLPTra);
             this.tabQuanLyPhieu.Controls.Add(this.tabLPhieuMuon);
+            this.tabQuanLyPhieu.Controls.Add(this.tabLPTra);
             this.tabQuanLyPhieu.Location = new System.Drawing.Point(194, 85);
             this.tabQuanLyPhieu.Name = "tabQuanLyPhieu";
             this.tabQuanLyPhieu.SelectedIndex = 0;
@@ -725,6 +726,7 @@
             // 
             // tabLPTra
             // 
+            this.tabLPTra.Controls.Add(this.txtMpTra);
             this.tabLPTra.Controls.Add(this.dgvSachTra);
             this.tabLPTra.Controls.Add(this.label2);
             this.tabLPTra.Controls.Add(this.btnXoaSachTra);
@@ -743,7 +745,7 @@
             // 
             this.dgvSachTra.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvSachTra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSachTra.Location = new System.Drawing.Point(266, 124);
+            this.dgvSachTra.Location = new System.Drawing.Point(274, 165);
             this.dgvSachTra.Name = "dgvSachTra";
             this.dgvSachTra.Size = new System.Drawing.Size(313, 120);
             this.dgvSachTra.TabIndex = 78;
@@ -751,7 +753,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(154, 131);
+            this.label2.Location = new System.Drawing.Point(162, 172);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 16);
             this.label2.TabIndex = 77;
@@ -761,7 +763,7 @@
             // 
             this.btnXoaSachTra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoaSachTra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnXoaSachTra.Location = new System.Drawing.Point(585, 130);
+            this.btnXoaSachTra.Location = new System.Drawing.Point(593, 171);
             this.btnXoaSachTra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoaSachTra.Name = "btnXoaSachTra";
             this.btnXoaSachTra.Size = new System.Drawing.Size(147, 33);
@@ -773,7 +775,7 @@
             // dpkNgayTra
             // 
             this.dpkNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpkNgayTra.Location = new System.Drawing.Point(267, 279);
+            this.dpkNgayTra.Location = new System.Drawing.Point(275, 320);
             this.dpkNgayTra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpkNgayTra.Name = "dpkNgayTra";
             this.dpkNgayTra.Size = new System.Drawing.Size(210, 23);
@@ -782,7 +784,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(154, 284);
+            this.label25.Location = new System.Drawing.Point(162, 325);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(61, 16);
@@ -793,7 +795,7 @@
             // 
             this.btnLapPhieuTra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLapPhieuTra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLapPhieuTra.Location = new System.Drawing.Point(319, 343);
+            this.btnLapPhieuTra.Location = new System.Drawing.Point(327, 384);
             this.btnLapPhieuTra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLapPhieuTra.Name = "btnLapPhieuTra";
             this.btnLapPhieuTra.Size = new System.Drawing.Size(147, 33);
@@ -805,7 +807,7 @@
             // cboDGPT
             // 
             this.cboDGPT.FormattingEnabled = true;
-            this.cboDGPT.Location = new System.Drawing.Point(267, 50);
+            this.cboDGPT.Location = new System.Drawing.Point(275, 91);
             this.cboDGPT.Name = "cboDGPT";
             this.cboDGPT.Size = new System.Drawing.Size(312, 24);
             this.cboDGPT.TabIndex = 71;
@@ -814,7 +816,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(154, 53);
+            this.label27.Location = new System.Drawing.Point(162, 94);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(80, 16);
             this.label27.TabIndex = 70;
@@ -1538,15 +1540,15 @@
             this.dtgDocGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDocGia.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dtgDocGia.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle35.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgDocGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgDocGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgDocGia.ColumnHeadersHeight = 30;
             this.dtgDocGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maDocGiaDataGridViewTextBoxColumn,
@@ -1555,14 +1557,14 @@
             this.diaChiDataGridViewTextBoxColumn,
             this.sDTDataGridViewTextBoxColumn});
             this.dtgDocGia.DataSource = this.docGiaBindingSource;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgDocGia.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgDocGia.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgDocGia.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgDocGia.Location = new System.Drawing.Point(0, 255);
             this.dtgDocGia.Name = "dtgDocGia";
@@ -1666,6 +1668,18 @@
             this.lblHienCo.Size = new System.Drawing.Size(65, 16);
             this.lblHienCo.TabIndex = 38;
             this.lblHienCo.Text = "Hiện có:";
+            // 
+            // txtMpTra
+            // 
+            this.txtMpTra.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtMpTra.Enabled = false;
+            this.txtMpTra.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMpTra.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtMpTra.Location = new System.Drawing.Point(351, 27);
+            this.txtMpTra.Name = "txtMpTra";
+            this.txtMpTra.Size = new System.Drawing.Size(123, 29);
+            this.txtMpTra.TabIndex = 79;
+            this.txtMpTra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // QuanLySach
             // 
@@ -1846,5 +1860,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtmaPhieu;
         private System.Windows.Forms.Label lblHienCo;
+        private System.Windows.Forms.TextBox txtMpTra;
     }
 }

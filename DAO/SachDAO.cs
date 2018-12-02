@@ -78,5 +78,13 @@ namespace DAO
             data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
+
+        public void UpdateSLBook(int sl, string ms)
+        {
+            string query = "Update Sach Set SoLuong='" + sl + "' where MaSach = '"+ms+"' ";
+
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+
     }
 }
