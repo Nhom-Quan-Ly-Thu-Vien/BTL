@@ -68,6 +68,8 @@ namespace QuanLyThuVien
 
         }
 
+
+
         //show panel,form
         #region
         private void btnDocGia_Click(object sender, EventArgs e)
@@ -101,14 +103,17 @@ namespace QuanLyThuVien
             panThongKe.Hide();
             tabQuanLyPhieu.Show();
 
-            tangMa("MP", dgvPhieuMuon, txtmaPhieu);
+            //tangMa("MP", dgvPhieuMuon, txtmaPhieu);
+            autoMaPhieu(txtmaPhieu);
             tabQuanLyPhieu.SelectedTab = tabQuanLyPhieu.TabPages[0];
             cmbTenDGPhieu.Text = "";
-            cmbTenSachPhieu.SelectedIndex = -1;       
+            cmbTenSachPhieu.SelectedIndex = 0;
+          
             lstSachMuon.Items.Clear();
             txtMaDGPhieu.Text = "";
             lblSLM.Hide();
             txtSLMuon.Hide();
+            lblHienCo.Hide();
             cboDGPT.SelectedIndex = -1;
         }
 
@@ -408,18 +413,32 @@ namespace QuanLyThuVien
 
         private void cmbTenSachPhieu_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            lblHienCo.Text = "Hiện Có:";
             lblSLM.Show();
             txtSLMuon.Show();
+            lblHienCo.Show();
+            //lblHienCo.Text += SachBUS.Instance.getSLuong("MS01");
+            //MessageBox.Show(cmbTenSachPhieu.SelectedValue.ToString());
+            lblHienCo.Text += SachBUS.Instance.getSLuong(cmbTenSachPhieu.SelectedValue.ToString() == "System.Data.DataRowView" ? "MS01" : cmbTenSachPhieu.SelectedValue.ToString());
+            
         }
 
         //Phiếu Mượn
+
+        //auto tawng mã
+
+        private void autoMaPhieu(TextBox txt)
+        {
+            txt.Text = "MP"+(PhieuMuonBUS.Instance.getSoLuongPhieu()+1<10?"0":"") + PhieuMuonBUS.Instance.getSoLuongPhieu().ToString();
+            
+        }
         private void btnShowPM_Click(object sender, EventArgs e)
         {
             dgvPhieuTra.Hide();
             dgvPhieuMuon.Show();
             dgvPhieuMuon.DataSource = PhieuMuonBUS.Instance.LoadPhieuMuon();
-            tangMa("MP", dgvPhieuMuon, txtmaPhieu);
+            //tangMa("MP", dgvPhieuMuon, txtmaPhieu);
+            autoMaPhieu(txtmaPhieu);
         }
 
         private void btnThemPhieu_Click_1(object sender, EventArgs e)
@@ -429,21 +448,30 @@ namespace QuanLyThuVien
             else if (cmbTenSachPhieu.SelectedIndex == -1) MessageBox.Show("Vui lòng chọn sách");
 
             else if (txtSLMuon.TextLength == 0) MessageBox.Show("Vui lòng nhập số lượng.");
+            else if (int.Parse(txtSLMuon.Text) > int.Parse(SachBUS.Instance.getSLuong(cmbTenSachPhieu.SelectedValue.ToString())))//Kiểm tra số lượng sách trong kho
+            {
+                MessageBox.Show("Số lượng sách hiện không đủ");
+            }
             else
-            try
             {
-                    tangMa("MP", dgvPhieuMuon, txtmaPhieu);
-                row = lstSachMuon.Items.Count;
-                lstSachMuon.Items.Add(cmbTenSachPhieu.SelectedValue.ToString());
-                lstSachMuon.Items[row].SubItems.Add(cmbTenSachPhieu.Text);
-                lstSachMuon.Items[row].SubItems.Add(txtSLMuon.Text);
-                lblSLM.Hide();
-                txtSLMuon.Hide();
+                try
+                {
+                    
+                    //tangMa("MP", dgvPhieuMuon, txtmaPhieu);
+                    autoMaPhieu(txtmaPhieu);
+                    row = lstSachMuon.Items.Count;
+                    lstSachMuon.Items.Add(cmbTenSachPhieu.SelectedValue.ToString());
+                    lstSachMuon.Items[row].SubItems.Add(cmbTenSachPhieu.Text);
+                    lstSachMuon.Items[row].SubItems.Add(txtSLMuon.Text);
+                    lblSLM.Hide();
+                    txtSLMuon.Hide();
+                }
+                catch
+                {
+                    return;
+                }
             }
-            catch
-            {
-                return;
-            }
+           
 
         }
 
@@ -463,7 +491,7 @@ namespace QuanLyThuVien
             else if (cmbTenSachPhieu.SelectedIndex == -1) MessageBox.Show("Vui lòng chọn sách");
 
             else if (txtSLMuon.TextLength == 0) MessageBox.Show("Vui lòng nhập số lượng.");
-
+            
             else
             {
                 for (int i = 0; i < lstSachMuon.Items.Count; i++)
@@ -594,6 +622,8 @@ namespace QuanLyThuVien
             cboDGPT.Text = dgvPhieuMuon.Rows[currenIndex].Cells[0].Value.ToString();
             tabQuanLyPhieu.SelectedTab = tabQuanLyPhieu.TabPages[2];
         }
+
+        
 
 
 

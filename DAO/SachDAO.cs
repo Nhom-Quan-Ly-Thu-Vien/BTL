@@ -69,5 +69,14 @@ namespace DAO
 
             return data;
         }
+
+
+        public DataTable getSLuong(string MaSach)
+        {
+            DataTable data;
+            string query = "select SoLuong from Sach where MaSach='" + MaSach + "'";
+            data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
     }
 }

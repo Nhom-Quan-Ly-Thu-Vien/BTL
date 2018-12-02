@@ -23,3 +23,10 @@ C:\Users\Administrator\Desktop\BTL\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.ca
 C:\Users\Administrator\Desktop\BTL\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Users\Administrator\Desktop\BTL\DAO\obj\Debug\DAO.dll
 C:\Users\Administrator\Desktop\BTL\DAO\obj\Debug\DAO.pdb
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\DAO\bin\Debug\DAO.dll
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\DAO\bin\Debug\DAO.pdb
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\DAO\bin\Debug\DTO.dll
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\DAO\bin\Debug\DTO.pdb
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\DAO\obj\Debug\DAO.dll
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\DAO\obj\Debug\DAO.pdb

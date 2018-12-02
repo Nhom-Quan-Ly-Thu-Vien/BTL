@@ -99,6 +99,14 @@ namespace DAO
 
             DataProvider.Instance.ExecuteNonQuery(query);
         }
+
+        public int getSoLuongPhieu()
+        {
+            string query = "select count(*) from PhieuMuon";
+
+            int sl = DataProvider.Instance.ExecuteScalar(query);
+            return sl;
+        }
    
     }
 }

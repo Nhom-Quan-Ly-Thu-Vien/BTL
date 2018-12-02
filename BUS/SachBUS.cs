@@ -54,5 +54,17 @@ namespace BUS
         {
             return SachDAO.Instance.LookBook(dk);
         }
+
+        public string getSLuong(string MaSach)
+        {
+            
+            
+                DataTable data = SachDAO.Instance.getSLuong(MaSach);
+                string s = data.Rows[0]["SoLuong"].ToString();
+                return s;
+            
+
+            
+        }
     }
 }

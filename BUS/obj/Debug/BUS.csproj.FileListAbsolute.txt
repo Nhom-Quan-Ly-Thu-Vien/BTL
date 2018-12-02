@@ -29,3 +29,12 @@ C:\Users\Administrator\Desktop\BTL\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.ca
 C:\Users\Administrator\Desktop\BTL\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\Administrator\Desktop\BTL\BUS\obj\Debug\BUS.dll
 C:\Users\Administrator\Desktop\BTL\BUS\obj\Debug\BUS.pdb
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\BUS\bin\Debug\BUS.dll
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\BUS\bin\Debug\BUS.pdb
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\BUS\bin\Debug\DAO.dll
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\BUS\bin\Debug\DTO.dll
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\BUS\bin\Debug\DAO.pdb
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\BUS\bin\Debug\DTO.pdb
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\BUS\obj\Debug\BUS.dll
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\BUS\obj\Debug\BUS.pdb

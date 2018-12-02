@@ -15,3 +15,8 @@ C:\Users\Administrator\Desktop\BTL\DTO\obj\Debug\DTO.csprojAssemblyReference.cac
 C:\Users\Administrator\Desktop\BTL\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\BTL\DTO\obj\Debug\DTO.dll
 C:\Users\Administrator\Desktop\BTL\DTO\obj\Debug\DTO.pdb
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\DTO\bin\Debug\DTO.dll
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\DTO\bin\Debug\DTO.pdb
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\DTO\obj\Debug\DTO.dll
+C:\Users\phamv\Desktop\GitHub\Nhom-Quan-Ly-Thu-Vien\BTL\BTL\DTO\obj\Debug\DTO.pdb

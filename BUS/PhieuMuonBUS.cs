@@ -61,5 +61,11 @@ namespace BUS
         {
             PhieuMuonDAO.Instance.DeletePhieu(mp,mdg,ms);
         }
+
+        public int getSoLuongPhieu()
+        {
+            int sl =PhieuMuonDAO.Instance.getSoLuongPhieu();
+            return sl;
+        }
     }
 }
